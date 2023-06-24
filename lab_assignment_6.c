@@ -6,19 +6,19 @@ int search(int numbers[], int low, int high, int value)
 	if (low > high)
 		return -1;
 
-  int mid = (low + high) / 2;
+  	int mid = (low + high) / 2;
 
-  if (numbers[mid] == value) {
-        return mid;
-  }
+  	if (numbers[mid] == value) {
+       		return mid;
+  	}
 
 	else if (value < numbers[mid]) {
-        return search(numbers, low, mid - 1, value);
-    }
+        	return search(numbers, low, mid - 1, value);
+    	}
 
 	else if (value > numbers[mid]){
-        return search(numbers, mid + 1, high, value);
-    }
+        	return search(numbers, mid + 1, high, value);
+    	}
 
 	else
 		return -1;
